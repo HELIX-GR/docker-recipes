@@ -26,7 +26,7 @@ FROM athenarc/datascience-notebook-with-python2:0.9a
 
 ARG PFLEXIBLE_VERSION
 
-RUN conda install --yes -p $CONDA_DIR/envs/python2/ hdbscan==0.8.13 joblib==0.11 basemap netcdf4 && \
+RUN conda install --yes -p $CONDA_DIR/envs/python2/ hdbscan==0.8.13 joblib==0.11 basemap netcdf4 sympy==1.5.1 && \
     conda clean --all -f -y
 
 RUN $CONDA_DIR/envs/python2/bin/pip install --no-cache-dir datadiff seaborn==0.9.1
